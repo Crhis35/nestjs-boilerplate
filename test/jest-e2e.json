@@ -1,0 +1,21 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@libs/auth/(.*)": "<rootDir>/../libs/auth/src/$1",
+    "@libs/auth": "<rootDir>/../libs/auth/src",
+    "@libs/common/(.*)": "<rootDir>/../libs/common/src/$1",
+    "@libs/common": "<rootDir>/../libs/common/src",
+    "@libs/database/(.*)": "<rootDir>/../libs/database/src/$1",
+    "@libs/database": "<rootDir>/../libs/database/src",
+    "@libs/mail/(.*)": "<rootDir>/../libs/mail/src/$1",
+    "@libs/mail": "<rootDir>/../libs/mail/src",
+    "@libs/mailer/(.*)": "<rootDir>/../libs/mailer/src/$1",
+    "@libs/mailer": "<rootDir>/../libs/mailer/src"
+  }
+}

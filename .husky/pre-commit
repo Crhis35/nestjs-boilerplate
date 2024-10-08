@@ -1,0 +1,3 @@
+
+echo "Running lint-staged before finishing commit"
+npx lint-staged

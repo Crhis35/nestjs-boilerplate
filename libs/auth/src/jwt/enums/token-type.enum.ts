@@ -1,0 +1,6 @@
+export enum TokenTypeEnum {
+  ACCESS = 'ACCESS',
+  REFRESH = 'REFRESH',
+  CONFIRMATION = 'CONFIRMATION',
+  RESET_PASSWORD = 'RESET_PASSWORD',
+}

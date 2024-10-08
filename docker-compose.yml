@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres
+    container_name: tmp-db
+    restart: always
+    ports:
+      - '${FORWARD_DB_PORT:-5432}:5432'
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_DB: ${DB_DATABASE}
+    networks:
+      - db-tier
+    volumes:
+      - tmp-db:/var/lib/postgresql/data
+
+networks:
+  app-tier:
+    driver: bridge
+  db-tier:
+    driver: bridge
+volumes:
+  tmp-db:
